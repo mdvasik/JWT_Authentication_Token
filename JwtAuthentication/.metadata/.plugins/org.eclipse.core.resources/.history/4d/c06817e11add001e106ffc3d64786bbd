@@ -1,0 +1,19 @@
+package com.jwt.service;
+
+
+@Service
+public class UserService {
+
+	private List<User> store = new ArrayList<>();
+
+	public UserService() {
+		   store.add(new User(UUID.randomUUID().toString(),"Vasik", "vasik@gmail.com"));
+		   store.add(new User(UUID.randomUUID().toString(),"Zaid", "zaid@gmail.com"));
+		   store.add(new User(UUID.randomUUID().toString(),"Rafiq", "rafiq@gmail.com"));
+	}
+	
+	 public List<User> getAllUsers() {
+	        return store;
+	    }
+	
+}
